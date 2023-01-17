@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <title>Bender Rodriguez</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+<div id="palette">
+
+  <div id="antennabase">
+    <div id="antennabaseshadow"></div>
+  </div>
+  <div id="antenna">
+    <div id="antennashadow"></div>
+  </div>
+  <div id="antennaball"></div>
+
+  <div id="head">
+    <div id="mouth">
+      <div id="line1"></div>
+      <div id="line2"></div>
+      <div id="line3"></div>
+      <div id="line4"></div>
+      <div id="line5"></div>
+
+      <div id="stripe1"></div>
+      <div id="stripe2"></div>
+
+    </div>
+    <div id="shadow">
+
+    </div>
+  </div>
+
+  <div id="eyesection">
+    <div id="eyeshadow"></div>
+    <div id="eyeblacks">
+
+      <div id="lefteye">
+        <div id="angryleft"></div>
+        <div class="pupil"></div>
+      </div>
+
+      <div id="righteye">
+        <div id="angryright"></div>
+        <div class="pupil"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<script lang="javascript">
+  const MAX_POSITION = 90,
+    MIN_POSITION = -10,
+    MIN_VALUE = 0,
+    PALLETE_WIDTH = 600
+  const eyeblacks = document.getElementById('palette')
+
+  eyeblacks.addEventListener('mousemove', func)
+  const number = (value) => value > MAX_POSITION ? MAX_POSITION : value < MIN_POSITION ? MIN_VALUE : value
+
+  const getElement = (id) => document.getElementById(id).querySelector('.pupil')
+
+  function func(e) {
+
+    const x = number((e.clientX - PALLETE_WIDTH) / 2) + 'px',
+      y = number(e.clientY - 350) + 'px'
+
+    const left =getElement('lefteye')
+    const right = getElement('righteye')
+    left.style.left = x
+    right.style.left = x
+    left.style.top = y
+    right.style.top = y
+  }
+
+</script>
+
+</body>
+</html>

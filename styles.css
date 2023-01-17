@@ -1,0 +1,277 @@
+:root {
+  --background-white: white;
+  --background-black: black;
+  --shadow: #ACBECA;
+  --background-auro-metal-saurus: #617687;
+  --border: solid 2px var(--background-black);
+  --width: 600px;
+  --height: 600px;
+  --line-2px: 2px;
+  --line-full: 100%;
+  --line-40px: 40px;
+  --stripe-26px: 26px;
+}
+
+body {
+  background: radial-gradient(ellipse closest-side, #78FEFF 1%, white, #00B9F9, #05425E, #00B9F9, #05425E, #00B9F9, #05425E, #00B9F9 130%);
+}
+
+.lineprops {
+  position: absolute;
+  width: var(--line-2px);
+  height: var(--line-full);
+  background-color: var(--background-black);
+}
+
+.stripeprops {
+  position: absolute;
+  height: var(--line-2px);
+  width: var(--line-full);
+  background-color: var(--background-black);
+}
+
+#palette {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  margin: 0 auto;
+}
+
+#head {
+  position: absolute;
+  bottom: 0;
+  left: 29%;
+  height: calc(var(--height) * .75);
+  width: calc(var(--width) * .5);
+  background-color: var(--shadow);
+  border-top-left-radius: calc(var(--width) * .43);
+  border-top-right-radius: calc(var(--width) * .43);
+  border-color: var(--border);
+}
+
+#shadow {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  height: calc(var(--height) * .75);
+  width: calc(var(--height) * .42);
+  background-color: var(--background-auro-metal-saurus);
+  border-top-left-radius: 230px;
+  border-top-right-radius: 205px;
+}
+
+#mouth {
+  height: 78px;
+  width: calc(var(--width) * .4);
+  background-color: white;
+  border-radius: 25px 25px 25% 25%;
+  border: var(--border);
+  position: absolute;
+  bottom: 25px;
+  left: 18px;
+  z-index: 1;
+}
+
+
+#line1 {
+  width: var(--line-2px);
+  height: var(--line-full);
+  background-color: var(--background-black);
+  position: absolute;
+  left: var(--line-40px);
+}
+
+#line2 {
+  width: var(--line-2px);
+  height: var(--line-full);
+  background-color: var(--background-black);
+  position: absolute;
+  left: calc(var(--line-40px) * 2);
+}
+
+#line3 {
+  width: var(--line-2px);
+  height: var(--line-full);
+  background-color: var(--background-black);
+  position: absolute;
+  left: calc(var(--line-40px) * 3);
+}
+
+#line4 {
+  width: var(--line-2px);
+  height: var(--line-full);
+  background-color: var(--background-black);
+  position: absolute;
+  left: calc(var(--line-40px) * 4);
+}
+
+#line5 {
+  width: var(--line-2px);
+  height: var(--line-full);
+  background-color: var(--background-black);
+  position: absolute;
+  left: calc(var(--line-40px) * 5);
+}
+
+#stripe1 {
+  width: var(--line-full);
+  height: var(--line-2px);
+  background-color: var(--background-black);
+  position: absolute;
+  top: var(--stripe-26px);
+}
+
+#stripe2 {
+  width: var(--line-full);
+  height: var(--line-2px);
+  background-color: var(--background-black);
+  position: absolute;
+  top: calc(var(--stripe-26px) * 2);
+}
+
+#eyesection {
+  width: 380px;
+  height: 130px;
+  background-color: var(--shadow);
+  position: absolute;
+  bottom: 140px;
+  left: 125px;
+  border-radius: 100px;
+  overflow: hidden;
+  border: var(--border);
+}
+
+#eyeshadow {
+  width: 255px;
+  height: 255px;
+  background-color: var(--background-auro-metal-saurus);
+  transform: rotate(45deg);
+  position: absolute;
+  left: 62px;
+  top: -60px;
+}
+
+
+#eyeblacks {
+  background-color: var(--background-black);
+  width: 360px;
+  height: 110px;
+  border-radius: 100px;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  overflow: hidden;
+}
+
+#lefteye {
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  background-color: var(--background-white);
+  position: absolute;
+  left: 50px;
+  top: -5px;
+  box-shadow: 0 -6px 10px 3px rgba(0, 0, 0, 0.6) inset;
+}
+
+#righteye {
+  width: 120px;
+  height: 120px;
+  border-radius: 120px;
+  background-color: white;
+  position: absolute;
+  right: 50px;
+  top: -5px;
+  box-shadow: 0 -6px 10px 3px rgba(0, 0, 0, 0.6) inset;
+}
+
+
+.pupil {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: 48px;
+  left: 43px;
+}
+
+#angryleft {
+  height: 120px;
+  width: 20px;
+  background-color: var(--background-black);
+  position: absolute;
+  right: -15px;
+  top: -28px;
+  transform: rotate(125deg);
+}
+
+#angryright {
+  height: 120px;
+  width: 20px;
+  background-color: var(--background-black);
+  position: absolute;
+  left: 30px;
+  top: -58px;
+  transform: rotate(235deg);
+}
+
+#antennabase {
+  height: 30px;
+  width: 60px;
+  background-color: var(--shadow);
+  border-radius: 45%;
+  position: absolute;
+  top: 135px;
+  left: 285px;
+  overflow: hidden;
+  border: var(--border);
+}
+
+
+#antennabaseshadow {
+  height: 30px;
+  width: 37px;
+  background-color: var(--background-auro-metal-saurus);
+  border-radius: 38%;
+  position: absolute;
+  left: 13px;
+  bottom: 2px;
+}
+
+#antenna {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 100px solid var(--shadow);
+  position: absolute;
+  top: 39px;
+  left: 300px;
+  z-index: -1;
+}
+
+#antennashadow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 90px solid var(--background-auro-metal-saurus);
+  position: absolute;
+  top: 10px;
+  left: -7px;
+}
+
+#antennaball {
+  width: 17px;
+  height: 17px;
+  border-radius: 100%;
+  background-color: var(--background-auro-metal-saurus);
+  position: absolute;
+  left: 304px;
+  top: 33px;
+  border: var(--border);
+}
+
+
+
+
